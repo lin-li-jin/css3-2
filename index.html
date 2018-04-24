@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>背景是视频</title>
+</head>
+<style type="text/css">
+*{
+	margin: 0px;
+	padding: 0px;
+}
+@-webkit-keyframes titleMove{
+	0%{
+		line-height: 300px;
+	}
+	100%{
+		line-height: 400px;
+	}
+}
+
+@keyframes titleMove{
+	0%{
+		line-height: 300px;
+	}
+	100%{
+		line-height: 400px;
+	}
+}
+.box{
+	height: 450px;
+	width: 100%;
+	background: #eef;
+	position: absolute;
+	z-index: -1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    background: #000 none no-repeat 50% 50%;
+	
+}
+.video_box{
+	width: 100%;
+    margin:0px auto;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content-box{
+	position: relative;
+	height: 100%;
+	height: 450px;
+	background: url("./1.png") repeat;
+	
+	
+}
+p{
+	color: #fff;
+	text-align: center;
+	line-height: 400px;
+	font-size: 40px;
+	-webkit-animation: titleMove 1s linear 0.1s 1 normal;
+	animation: titleMove 1s linear 0.1s 1 normal;
+}
+</style>
+<body>
+<div class="box">
+	<video autoplay="autoplay" loop="loop" muted="true" class="video_box">
+		<source src="https://ninghao.net/sites/all/themes/ninghao/images/blue_bokeh.mp4" type="video/mp4">
+	</video>	
+</div>
+<div class="content-box">
+	<p>hello,我是林小宅</p>
+</div>
+</body>
+</html>
